@@ -33,12 +33,10 @@ for (const row of yearlyPlan) {
         else if (seed === "Asparagus") {
             //Take that seed and add it to the array of plants in the field module and invoke each seed function
              addPlant(createAsparagus());
-            //newPlantsFieldArray.push(seedsArray)
         }
         else if (seed === "Soybean") {
             //Take that seed and add it to the array of plants in the field module and invoke each seed function
              addPlant(createSoybean());
-            //console.log(soybeanSeed)
         }
         else if (seed === "Sunflower") {
             //Take that seed and add it to the array of plants in the field module and invoke each seed function
