@@ -9,7 +9,4 @@ export const createAsparagus = () => {
     }
     return asparagus
 }
-
-    
-//Should return an object with type, height, output
-    //return asparagusObj
+   

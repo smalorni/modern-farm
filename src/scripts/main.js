@@ -1,27 +1,22 @@
-//console.log("Welcome to the main module")
 
-//import function createPlan() 
 import { createPlan } from "./plan.js";
-//import { plantSeeds} from "./tractor.js";
-import { addPlant } from "./field.js";
 import { usePlants } from "./field.js"
-//import { harvestPlants } from "./harvester.js";
 import { Catalog } from "./catalog.js";
 import  { plantSeeds } from "./tractor.js"
 import { harvestPlants} from "./harvester.js";
 
-//Step 1: In the plan.js module, there is a createPlan() function that is exported. In the main.js module, import that function and invoke it. Since that function returns a value, you need to store that value in a variable named yearlyPlan and store returned values in a new variable named yearlyPlan
+/*Step 1: In the plan.js module, there is a createPlan() function that is exported. In the main.js module, import that function and invoke it. Since that function returns a value, you need to store that value in a variable named yearlyPlan and store returned values in a new variable named yearlyPlan*/
 let yearlyPlan = createPlan();
-//console log for output
-console.log(yearlyPlan);
+//console.log(yearlyPlan);
 
 const plantedSeeds = plantSeeds(yearlyPlan)
 
-console.log(usePlants())
+//console.log(usePlants())
 
 const plantedHarvest = harvestPlants(usePlants())
-console.log(plantedHarvest)
+//console.log(plantedHarvest)
 
+//HTML string in Catalog module and class container in index.html
 const parentHTMLElement = document.querySelector(".container")
 parentHTMLElement.innerHTML = Catalog(plantedHarvest);
 
@@ -29,8 +24,8 @@ parentHTMLElement.innerHTML = Catalog(plantedHarvest);
 
 
 
-//Test logic for Seeds Producing Module:
-/*import { createAsparagus } from "./seeds/asparagus.js"
+/*********Test logic for Seeds Producing Module:***********************************
+import { createAsparagus } from "./seeds/asparagus.js"
 const asparagusSeed = createAsparagus()
 console.log(asparagusSeed);
 

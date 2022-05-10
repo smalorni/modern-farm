@@ -1,6 +1,6 @@
 //Step 2: In each module define and export a function for creating a seed. Define the functions with the following syntax.
 
-export const createPotato = (type, height, output) => {
+export const createPotato = () => {
     let potato =
         {
             type: "Potato", 

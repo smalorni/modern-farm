@@ -4,7 +4,7 @@
 
 //Corn exception: return an array with two identical objects in it
 
-export const createCorn = ( type, height, output) => {
+export const createCorn = () => {
     let corn = [
         {
             type: "Corn",

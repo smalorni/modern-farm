@@ -6,45 +6,46 @@ import { createWheat } from "./seeds/wheat.js";
 import { createPotato } from "./seeds/potato.js";
 import { addPlant } from "./field.js"
 
-//define/export a plantSeeds function
+//define and export a plantSeeds function
+//parameter is year's planting plan
 export const plantSeeds = (yearlyPlan) => { 
-    /*contains 4 arrays representing rows in field to be plants
-    //iterate both parent and child array
-    let seedsArray = [
-        ["Potato", "Soybean", "Soybean", "Corn"],
-        ["Wheat", "Corn", "Wheat", "Asparagus"],
-        ["Asparagus", "Wheat", "Soybean", "Corn"],
-        ["Asparagus", "Soybean", "Potato", "Wheat"]
+    /*Example Array - contains 4 arrays representing rows in field and iterate both parent and child arrays
+    
+    let seedsArray = [ (Parent array)
+        ["Potato", "Soybean", "Soybean", "Corn"],   (Child Array for individual seed)
+        ["Wheat", "Corn", "Wheat", "Asparagus"],    (Child Array)
+        ["Asparagus", "Wheat", "Soybean", "Corn"],  (Child Array)
+        ["Asparagus", "Soybean", "Potato", "Wheat"] (Child Array)
     ]*/
-    //iterated thru parents, then iterated thru the children //(individual seed)
-     //create plan function   
-//newPlantsFieldArray function from field
+
+//For of loop to iterate through each row
 for (const row of yearlyPlan) {
-    for(const seed of row) { //each seed in 
+    //for of loop to iterate through each individual seed in each row
+    for(const seed of row) { 
         if ( seed === "Potato") {
-            //Take that seed and add it to the array of plants in the field module - addPlant
+            //Take that seed and add it to array of plants in field module and invoke each seed function
             addPlant(createPotato());
         }
         else if (seed === "Corn") {
-            //Take that seed and add it to the array of plants in the field module.
+            //Take that seed and add it to the array of plants in the field module and invoke each seed function
             addPlant(createCorn());
         }
         else if (seed === "Asparagus") {
-            //Take that seed and add it to the array of plants in the field module.
+            //Take that seed and add it to the array of plants in the field module and invoke each seed function
              addPlant(createAsparagus());
             //newPlantsFieldArray.push(seedsArray)
         }
         else if (seed === "Soybean") {
-            //Take that seed and add it to the array of plants in the field module.
+            //Take that seed and add it to the array of plants in the field module and invoke each seed function
              addPlant(createSoybean());
             //console.log(soybeanSeed)
         }
         else if (seed === "Sunflower") {
-            //Take that seed and add it to the array of plants in the field module.
+            //Take that seed and add it to the array of plants in the field module and invoke each seed function
              addPlant(createSunflower());
         }
         else if (seed === "Wheat") {
-            //Take that seed and add it to the array of plants in the field module.
+            //Take that seed and add it to the array of plants in the field module and invoke each seed function
              addPlant(createWheat());
             }
         }
